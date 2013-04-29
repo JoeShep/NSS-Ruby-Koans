@@ -31,14 +31,14 @@ class AboutSymbols < EdgeCase::Koan
   # THINK ABOUT IT:
   #
   # Why do we convert the list of symbols to strings and then compare
-  # against the string value rather than against symbols? 
+  # against the string value rather than against symbols?
 
   in_ruby_version("mri") do
     RubyConstant = "What is the sound of one hand clapping?"
     def test_constants_become_symbols
       all_symbols = Symbol.all_symbols
 
-      assert_equal false, all_symbols.include?(__)
+    assert_equal false, all_symbols.include?(RubyConstant)
     end
   end
 
